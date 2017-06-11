@@ -1,0 +1,257 @@
+/*-- LESS CODE ----------------------------------------------------*/
+
+/*-- VARIABLES */
+@white: #FFF; 
+@red: #E65C43;
+@bg: '../images/bg.gif';
+@logo: '../images/logo.png';
+@grey: #666;
+@orange: #F25C43;
+@light-grey: #F5F6F6;
+@dark-grey: #30353D;
+@social-media-bg: '../images/social-media.png';
+
+/*-- MIXINS -------------------------------------------------------*/
+
+.box(@width, @height, @float) {
+    width: @width;
+    height: @height;
+    float: @float;
+}
+
+.box(@width, @height, @float, @clear) {
+    width: @width;
+    height: @height;
+    float: @float;
+    clear: @clear;
+}
+
+.box-margin(@margin) {
+    margin: @margin;
+}
+
+.headline-params (@color, @font-weight, @font-size){
+    color: @color;
+    font-weight: @font-weight;
+    font-size: @font-size;
+}
+
+.headline-params (@color, @font-weight, @font-size, @line-height, @margin-bottom){
+    color: @color;
+    font-weight: @font-weight;
+    font-size: @font-size;
+    line-height: @line-height;
+    margin-bottom: @margin-bottom;
+}
+
+/*-- BASIC STYLES ---------------------------------------*/
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size:1em;
+    line-height:2em;
+    background:url(@bg) @white repeat-x;
+    margin:0;
+}
+main {
+    width:940px;
+    .box-margin(0 auto);
+    padding:0 10px;
+}
+
+/* NAVIGATION */
+figure {
+    .box(400px, 190px, left);
+    .box-margin(0);
+    background:url(@logo) no-repeat 0 50px;
+    display:block;
+}
+
+nav {
+    .box(540px, 190px, left);
+    text-align:right;
+    ul {
+        list-style-type:none;
+        margin-top:95px;
+        li {
+            display:inline;
+            font-size:0.8em;
+            margin-right:10px;
+            a {
+                color:@red;
+                text-decoration:none;
+                letter-spacing:-0.01em;
+            }
+            a:hover {
+                color:@white;
+            }
+        }
+    }
+}
+
+
+/* HEADER */
+header {
+    .box(inherit, auto, none, both);
+    text-align:center;
+    padding-top:40px;
+    img {
+        max-width:100%;
+        height:auto;
+    }
+    h1 {
+        .headline-params (@red, 100, 4em, 0, normal);
+    }
+    h2 { 
+        .headline-params (@white, 900, 2.5em, 0, 70px);
+    }
+    h3 { 
+        .headline-params (@grey, 400, 2em, 0, 50px); 
+    }
+}
+
+
+/* CONTENT */
+#headline {
+    .box(100%, 130px, none);
+    background: @orange;
+    text-align:center;
+    .box-margin(0 auto);
+    h1 {
+        .headline-params (@white, 100, 2.5em);
+        padding-top:50px;
+    }
+}
+
+#content {
+    .box(940px, auto, none);
+    .box-margin(20px auto);
+    h3 {
+        .headline-params (@grey, 400, 2em); 
+    }
+    #products          {
+        .box(460px, auto, left);
+        img {
+            float:left;
+            margin-right:20px;
+        }
+        article  {
+            margin-bottom:40px;
+        }
+        h4 {
+            line-height:1em;
+        }
+    }
+
+    #testimonials {.box(460px, auto, right);}
+}
+    
+/* FOOTER */
+.greybar {
+    .box(100%, 90px, none, both);
+    background: @light-grey;
+    padding-top: 30px;
+}
+footer {
+    .box(100%, 120px, none);
+    background:@dark-grey;
+    text-align: center;
+    color: @white;
+    padding-top: 50px;
+}
+
+.social-media {
+    width:165px;
+    .box-margin(0 auto);
+    div           {float:left;margin-right:5px;}
+    a             {display:block;width:36px;height:36px;text-indent:-9999px;}
+    div.one       {background:url(@social-media-bg) 0 0;}
+    div.two 	  {background:url(@social-media-bg) -38px 0;}
+
+/****************************************************************************/
+/*---- USING OPERATORS -----------------------------------------------------*/
+/****************************************************************************/
+    div.three     {background:url(@social-media-bg) (-38px-38px) 0;}
+    div.four 	  {background:url(@social-media-bg) (-38px-38px-38px) 0;}
+/****************************************************************************/
+}
+    
+    
+/* MEDIA QUERIES */
+@media screen and (max-width:959px) {
+
+main {width:768px;}
+figure {.box(inherit, 140px, none); background-position:center;}
+nav 						
+    {
+        .box(inherit, 50px, none); text-align:center;
+        ul { 
+            margin-top:0;
+            li {
+                font-size:1em;
+                margin:0 10px;
+            }
+        }
+}
+
+header {
+    h1 {font-size:3em;}
+    h2 {font-size:1.5em;}    
+}
+#content {
+    width:inherit;
+    #products, #testimonials {
+        /****************************************************************************/
+        /*---- USING FUNCTIONS -----------------------------------------------------*/
+        /****************************************************************************/
+        width:percentage(0.46);margin:0 percentage(0.02);
+        /****************************************************************************/
+    }
+    
+}
+    
+}
+
+@media screen and (max-width:767px) {
+main 						{width:460px;}
+nav ul li					{font-size:0.8em;margin:0 5px;}
+
+header {
+    h1	{font-size:2em;}
+    h2 	{font-size:1em;}
+    img	{margin-bottom:100px;}
+    h3	{font-size:1.5em;}    
+}
+
+#headline h1 				{font-size:2em;padding-top:50px;}
+#content {
+    #products, #testimonials {
+        /****************************************************************************/
+        /*---- USING FUNCTIONS -----------------------------------------------------*/
+        /****************************************************************************/
+        width:percentage(0.96);margin:0 percentage(0.02);float:none;
+        /****************************************************************************/
+    }    
+}
+    
+}
+
+@media screen and (max-width:459px) {
+main 						{width:300px;}
+figure						{background-size:contain;height:100px;}
+nav							{margin-bottom:40px !important;}
+select              		{width:percentage(0.95);}
+#headline h1 				{font-size:1.5em;padding-top:30px;}
+
+header {
+    img			 		{margin-bottom:80px;}
+    h1:first-child		{font-size:1.4em;margin-bottom:20px;}
+    h2					{font-size:1.4em;}
+    h3					{color:@white;font-size:1em;}  
+} 
+#content h3					{font-size:1.6em;}
+.greybar, article img		{display:none;}
+footer						{text-align:center;}
+footer {
+    p, img 		{float:none;margin:0;}  
+} 
+}

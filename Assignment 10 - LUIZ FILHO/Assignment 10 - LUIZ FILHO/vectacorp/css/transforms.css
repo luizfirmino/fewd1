@@ -1,0 +1,12 @@
+.image-trans {
+    width: 130px;
+    margin: 0 0 0 0;
+    padding: 0px 0px 0px 0px;
+    transition:all 0.3s ease;
+}
+
+.image-trans:hover {
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
+}

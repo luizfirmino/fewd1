@@ -1,0 +1,50 @@
+header img {
+	max-width:100%;
+	height:auto;	
+}
+header ul {
+    list-style:none;
+	margin:0;
+	padding:0;
+    position:relative;
+}
+header ul li {
+    position:relative;
+    float:left;
+}
+header {
+    overflow:hidden;
+    width:100%;
+	margin:20px auto;
+}
+
+header ul {
+	width: 300%;
+	-webkit-animation: carousel 30s infinite;
+	animation: carousel 30s infinite;
+}
+
+@-webkit-keyframes carousel {
+    0%		{left:0;}
+    10%		{left:0;}
+    20%		{left:-100%;}
+    45%		{left:-100%;}
+    50%		{left:-200%;}
+    65%		{left:-200%;}
+    70%		{left:-100%;}
+    85%		{left:-100%;}
+    90%	    {left:0;}
+    100%	{left:0;}
+}
+@keyframes carousel {
+    0%		{left:0;}
+    10%		{left:0;}
+    20%		{left:-100%;}
+    45%		{left:-100%;}
+    50%		{left:-200%;}
+    65%		{left:-200%;}
+    70%		{left:-100%;}
+    85%		{left:-100%;}
+    90%	    {left:0;}
+    100%	{left:0;}
+}

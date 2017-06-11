@@ -1,0 +1,26 @@
+#topbar {
+    background-color: lightgray;
+    text-align: center;
+    height: 30px;
+    transition: height .7s ease;
+    -webkit-transition: height .7s ease; 
+    overflow: hidden;
+}
+
+#topbar:hover {
+    height: 70px;
+}
+
+#topbar-hidden a {
+    color: #8c9696;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    color: #cc1b0e;
+    text-decoration: none;
+    font-weight: bold;
+}

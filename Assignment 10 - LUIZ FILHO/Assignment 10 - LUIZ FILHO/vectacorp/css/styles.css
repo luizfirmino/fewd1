@@ -1,0 +1,41 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	line-height: 2em;
+}
+#main {
+	width: 960px;
+	margin: 0 auto;
+	background: white;
+}
+figure {
+	width: 960px;
+	height: 100px;
+	background: url('../images/logo.png') no-repeat;
+}
+ul {
+	padding: 0;
+	list-style-type: none;	
+}
+header {
+	overflow:hidden;
+}
+#col1, #col2 {
+	min-height: 200px;
+	float: left;
+}
+#col1 {
+	width: 600px;
+	margin: 0 15px;
+}
+#col2 {
+	width: 300px;
+	margin: 0 15px;
+}
+#col2 ul {
+	margin:0;
+}
+#col2 ul li {
+	float:left;
+	margin:0 10px;
+}

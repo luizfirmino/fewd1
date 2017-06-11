@@ -1,0 +1,154 @@
+/* BASE STYLES */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2em;
+}
+
+.center {
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+/* LOGO AND NAV STYLES */
+
+.logo {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    background-color: #2076b3;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav {
+    margin-top: 30px;
+}
+
+/* HEADER STYLES */
+
+header h1 {
+    color: #fff;
+    font-size: 3em;
+    line-height: 0;
+}
+
+header p {
+    color: #fff;
+    font-size: 1.5em;
+    line-height: normal;
+}
+
+.header-bg {
+    background-color: #2076b3;
+    max-height: 265px;
+}
+
+.product {
+    float: right;
+    width: 30%;
+}
+
+.product img {
+    width: 100%;
+}
+
+.header {
+    float: left;
+    width: 70%;
+    height: 394px;
+}
+
+/* CONTENT STYLES */
+.box1, .box2, .box3 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+/* FOOTER STYLES */
+.footer-bg {
+    background-color: #333333;
+    height: 200px;
+    clear: both;
+}
+
+/* TABLET PORTRAIT */
+@media screen and (max-width:768px) {
+    .center {width: 720px;}
+    header h1 {font-size: 2.8em;}
+    .header-bg {max-height: 200px;}
+    .header {height: 300px;}
+}
+
+/* WIDE SMARTPHONE LANDSCAPE (IPHONE 5/6) */
+@media screen and (max-width:600px) {
+
+    .logo {
+        float: none;
+        text-align: center;
+    }
+
+    nav {
+        float: none;
+    }
+    
+    .center { width: 560px; }
+     header h1 { font-size: 2.2em; }
+    header p { font-size: 1.3em; }
+    .header-bg { max-height: 155px;}
+    .header {height: 240px;}
+    .box1, .box2, .box3 { padding: 5px;}
+    h1 { font-size: 1.2em; }
+    
+}
+/* OLDER SMARTPHONE LANDSCAPE (IPHONE 3/4) */
+@media screen and (max-width:480px) {
+    
+    .center { width: 440px; }
+    nav ul li { margin-left: 0px;}
+    header h1 { font-size: 2em; }
+    header p { font-size: 1em; }
+    .header {
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    .box1, .box2, .box3 { width: 100%; }
+    h1 { font-size: 1.2em; }
+    .product { display: none; }
+    
+}
+/* SMARTPHONE PORTRAIT */
+@media screen and (max-width:340px) {
+
+    .center { width: 300px; }
+    nav ul li {
+        display: list-item;
+        text-align: center;
+        margin-top: 10px;
+        padding: 5px;
+    }
+    header h1 { font-size: 1.5em; }
+    header p { font-size: 1em; }
+    
+}
